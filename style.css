@@ -1,0 +1,222 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body{
+    background-color: #dddddd;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#interface{
+    width: 1000px;
+    background-color: whitesmoke;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px gray;
+    padding: 10px;
+}
+p{
+    text-align: justify;
+    text-indent: 2cm
+}
+header#cabecalho img#logo{
+    width: 200px;
+    position: absolute;
+    left: 990px;
+    top: 60px;
+}
+header#cabecalho{
+    border-bottom: 1px #606060 solid;
+    height: 200px;
+    background: url("_imagens/logo_fundo_removido_micro.png") no-repeat 0px 80px;
+}
+header#cabecalho h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30pt;
+    color:#606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho h2{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(163, 163, 163);
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+a{
+    color:black;
+    transition: color 1s;
+}
+a:hover{
+    color: dimgray;
+}
+
+/* Formatação de Imagens com Legenda */
+
+figure.foto_legenda{
+    position: relative;/* Posição Relativa ao Código HTML. Posição Relativa ao Local em Que Está no Código HTML */
+    width: 400px;
+    border: 5px solid white; /* Borda Da Imagem (foto legenda) */
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto_legenda img{
+    width: 100%;
+    height: 100%; 
+}
+figure.foto_legenda figcaption{
+    position: absolute; /* Posição Absoluta da Legenda (figcaption) em Relação ao Seu Container/ em Relação à Sua Tag Pai (figure) */
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.4);/* Background na cor preta porém com uma transparencia */
+    color: seashell;
+    width: 100%; /* A Legenda e Seu Background Ocupa 100% da Imagem */
+    height: 100%; /* A Legenda e Seu Background Ocupa 100% da Imagem */
+    padding: 10px;/* Maior Espaço da Borda da Imagem */
+    box-sizing: border-box; /* Delimita um Box Dentro da Borda Para que o Background Não Ultrapasse a Imagem */
+    opacity: 0; /* Isto Serve Para Transparecer a Legenda, Para Deixar a Imagem Visivel */
+    transition: opacity 1s; /* Dá Um Efeito de Transição na Legenda de Transparente Para Translúcida */
+}
+figure.foto_legenda:hover figcaption{/*Define O Que Acontece Ao Passar O Mouse Sobre A Imagem*/
+
+    opacity: 1;/*Ao Passar O Mouse A Opacidade Vira 1. A Legenda Passa de Transparente Para Translucido */
+
+}
+
+/* Formatação de Menus */
+
+nav#menu {
+    display: block; /* Transforma o Nav menu em um bloco que pode flutuar sobre a tela e pode ficar sobre outros elementos */
+    position: relative; 
+}
+nav#menu ul{
+    list-style-type: none;/* Retira os Marcadores da lista (retira as bolinhas) */
+    text-transform: uppercase;/* Coloca todo o texto em letras maiusculas */
+    position: fixed;
+    top: -20px;
+    left: 800px;
+}
+nav#menu li{
+    display: inline-block; /* define os elementos da lista como blocos e os coloca na mesma linha */
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    transition: background-color 1s;
+}
+nav#menu li:hover{
+    background-color:#606060;
+}
+nav#menu h1{
+    display: none; /* 'Desaparece' com o h1 presente no nav#menu */
+}
+nav#menu a{
+    color: black;
+    transition: color 1s;
+    text-decoration: none; /* Retira toda decoração do texto do tipo underline, overline entre outros */
+}
+nav#menu a:hover{
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+/* Formatação do Corpo do Texto */
+
+section#corpo{
+    display: block;
+    width: 570px;
+    float: left; /* Permite que o texto flutue por sobre a tela e se desloque para a esquerda */
+    border-right: 1px solid #606060;
+    padding-right: 20px;
+}
+article#servicos h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15pt;
+    color: #3f3f3f;
+    background-color: silver;
+    padding: 10px 0px 5px 2px;
+    margin: 10px 0 10px 0;
+}
+header#cabecalho_artigo h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20pt;
+    color: #3f3f3f;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+header#cabecalho_artigo h2{
+    font-family: 'Raleway', sans-serif;
+    color: #606060;
+    font-size: 13pt;
+    background-color: whitesmoke;
+    margin: 0px;
+}
+header#cabecalho_artigo h3{
+    font-size: 10px;
+    color: #3f3f3f;
+}
+header#cabecalho_artigo h3.direita{
+    text-align: right;
+}
+aside#lateral{
+    display: block;
+    width: 400px;
+    float: right;
+}
+aside#lateral h1{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20pt;
+    color: #3f3f3f;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+aside#lateral h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15pt;
+    color: #3f3f3f;
+    background-color: silver;
+    padding: 10px 0px 5px 2px;
+    margin: 10px 0 10px 0;
+}
+aside#lateral h3{
+    text-align: center;
+}
+table#conhecimentos{
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#conhecimentos td{
+    border: 1px solid #606060;
+    padding: 8px;
+    text-align: center;
+}
+
+table#conhecimentos tr.cinza{
+    background-color: #606060;
+    color: white;
+}
+table#conhecimentos tr.silver{
+    background-color: silver;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+table#conhecimentos caption{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#conhecimentos caption span{
+    display: block;
+    float: right;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 8pt;
+    margin-top: 10px;
+}
+footer#rodape{
+    clear: both;
+    border-top: 1px solid #606060;
+}
+footer#rodape p{
+    text-align: center;
+}
